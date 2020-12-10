@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      My Info
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+  <ion-card>
+    <img src="../../assets/qrcodeimage.jpg" />
+    <ion-card-header>
+      <ion-card-title>My Digital Info</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Digitalize your information into QR Code...
+    </ion-card-content>
+      <ion-row>
+        <ion-col></ion-col>
+        <ion-col center text-center>
+            <ion-button [routerLink]="['/qrcode']" shape="ion-button round" size="small" color="primary">Generate QR Code</ion-button>
+        </ion-col>
+        <ion-col></ion-col>
+      </ion-row>
+  </ion-card>
+</ion-content>

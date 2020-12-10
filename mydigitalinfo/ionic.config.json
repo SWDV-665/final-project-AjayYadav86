@@ -1,0 +1,7 @@
+{
+  "name": "mydigitalinfo",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

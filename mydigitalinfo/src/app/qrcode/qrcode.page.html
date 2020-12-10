@@ -1,0 +1,96 @@
+<ion-header>
+  <ion-toolbar class="ios hydrated">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ios title-ios hydrated">Provide Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list lines="full" class="ion-no-margin ion-no-padding ios list-ios list-lines-full list-ios-lines-full hydrated">
+    <ion-grid>
+      <form [formGroup]="customerForm" (ngSubmit)="onFormSubmit()">
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label position="floating">First Name</ion-label>
+              <ion-input formControlName="firstName" type="text" required></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+              <ion-label position="floating">Last Name</ion-label>
+              <ion-input formControlName="lastName" type="text" required></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+          <ion-item>
+            <ion-label position="floating">Street Name Or Number</ion-label>
+            <ion-input formControlName="address1" type="text" required></ion-input>
+          </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label position="floating">City</ion-label>
+              <ion-input formControlName="city" type="text" required></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+              <ion-label position="floating">State</ion-label>
+              <ion-input formControlName="state" type="text" required></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+              <ion-label position="floating">Zip</ion-label>
+              <ion-input formControlName="zipcode" type="text" required></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label position="floating">Phone#</ion-label>
+              <ion-input formControlName="phoneNumber" type="text" required></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+              <ion-label position="floating">Email</ion-label>
+              <ion-input formControlName="email" type="text" required></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+       
+          <p style="text-align:center;color:red;">Select Symptoms If Any</p>
+
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-checkbox color="danger" slot="start"  formControlName="fever"></ion-checkbox>
+              <ion-label>Fever</ion-label>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+              <ion-checkbox color="danger" slot="start" formControlName="cough" ></ion-checkbox>
+              <ion-label>Cough</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col></ion-col>
+          <ion-col>
+            <ion-button type="submit" color="primary" shape="ion-button round" expand="block">Submit</ion-button>
+          </ion-col>
+          <ion-col></ion-col>
+        </ion-row>
+      </form>
+    </ion-grid>
+  </ion-list>
+</ion-content>
